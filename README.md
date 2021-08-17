@@ -24,6 +24,6 @@ Ibex is a heterogeneous group of nodes, a mix of AMD, Intel and Nvidia GPUs with
 ## Workflow for Rice Variant Valling 
 
 
-/sites/default/files/files/public/Graphical_abstract.png
+![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/Graphical_abstract.png)
 
 
