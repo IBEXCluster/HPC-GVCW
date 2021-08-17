@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -N 5 							### 32 samples per node
+#SBATCH --partition=workq
+#SBATCH -A k01
+#SBATCH -J Phase3
+#SBATCH --error=/scratch/kathirn/3k/logs/Phase3_%J.err
+#SBATCH --output=/scratch/kathirn/3k/logs/Phase3_%J.out
+#SBATCH --time=23:00:00
+
+### Software modules
+export MODULEPATH=/project/k01/kathirn/software/modules:$MODULEPATH
+module load gatk/4.1.6.0 
+
+## Variables
+mkdir -p /scratch/$USER/tmp/$SLURM_JOB_ID
+
+export OUTPUT=/project/k01/kathirn/3k/OUTPUT
+export gVCF=${OUTPUT}/gVCF;
+export SNPs=${OUTPUT}/SNPs;
+export INDELs=${OUTPUT}/INDELs;
+mkdir -p $gVCF;
+mkdir -p $SNPs;
+mkdir -p $INDELs;
+
+srun --hint=nomultithread --ntasks=136 ./Phase3.exe
