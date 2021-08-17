@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH -N 292 							### 24 samples per node, i.e., Nodes = Ceil (no. of FR.fastq.gz/24), 2674/24=111.41, 112 nodes 
+#SBATCH --partition=workq
+#SBATCH -A k1514
+#SBATCH -J Phase1
+#SBATCH --error=/scratch/kathirn/3k/logs/Phase1.6988sample.292nodes.%J.err
+#SBATCH --output=/scratch/kathirn/3k/logs/Phase1.6988sample.292nodes.%J.out
+#SBATCH --time=15:00:00
+
+### Software modules
+export MODULEPATH=/project/k01/kathirn/software/modules:$MODULEPATH
+module load bwa/0.7.17 samtools/1.8 gatk/4.1.6.0
+
+export PROJECT=/project/k01/kathirn/3k/OUTPUT/batch2
+mkdir -p $PROJECT ;
+mkdir -p /scratch/$USER/tmp/$SLURM_JOB_ID ;
+
+srun --hint=nomultithread --ntasks=6988 ./Phase1.exe
