@@ -2,7 +2,7 @@
 
 ## Principal investigators (PI)
 
-<bold>Prof. Rod A. Wing</bold>, <br> 
+<b>Prof. Rod A. Wing</b>, <br> 
 Director, Center for Desert Agriculture, <br> 
 Professor, Biological and Environmental Science and Engineering, <br> 
 4700 King Abdullah University of Science and Technology, <br> 
