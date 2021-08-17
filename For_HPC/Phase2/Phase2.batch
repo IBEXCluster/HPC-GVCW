@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -N 13 							### 32 samples per node
+#SBATCH --partition=workq
+#SBATCH -A k01
+#SBATCH -J Phase2
+#SBATCH --error=/scratch/kathirn/3k/logs/Phase2.2674samples_%J.err
+#SBATCH --output=/scratch/kathirn/3k/logs/Phase2.2674samples_%J.out
+#SBATCH --time=23:30:00
+
+### Software modules
+export MODULEPATH=/project/k01/kathirn/software/modules:$MODULEPATH
+module load samtools/1.8 gatk/4.1.6.0 tabix/0.2.6
+
+mkdir -p /scratch/$USER/tmp/$SLURM_JOB_ID 
+
+export PROJECT=/project/k01/kathirn/3k/OUTPUT ;
+export BAM=${PROJECT}/BAM;
+export VCF=${PROJECT}/VCF;
+mkdir -p $BAM;
+mkdir -p $VCF;
+
+srun --hint=nomultithread --ntasks=291 ./Phase2.exe
