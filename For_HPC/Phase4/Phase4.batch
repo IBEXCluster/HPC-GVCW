@@ -1,0 +1,31 @@
+#!/bin/bash
+#SBATCH -N 1 							### 32 samples per node
+#SBATCH --partition=workq
+#SBATCH -A k1514    #k01
+#SBATCH -J Phase4
+##SBATCH --error=/scratch/kathirn/3k/logs/Phase4_%J.err
+##SBATCH --output=/scratch/kathirn/3k/logs/Phase4_%J.out
+
+#SBATCH --error=/scratch/zhouy0e/3k/logs/Phase4_%J.err
+#SBATCH --output=/scratch/zhouy0e/3k/logs/Phase4_%J.out
+
+#SBATCH --time=10:00
+
+### Software modules
+# export MODULEPATH=/project/k01/kathirn/software/modules:$MODULEPATH
+export MODULEPATH=/project/k1514/software/modules:$MODULEPATH
+
+module load gatk/4.1.6.0 
+
+## Variables
+#export OUTPUT=/project/k01/kathirn/3k/OUTPUT
+#export OUTPUT=/project/k1514/scripts/version2/Phase3/testOUTPUT
+export OUTPUT=/project/k1514/scripts/version2/Phase3/OUTPUTall
+
+
+export SNPs_per_Chr=${OUTPUT}/SNPs_per_Chr;
+export INDELs_per_Chr=${OUTPUT}/INDELs_per_Chr;
+mkdir -p $SNPs_per_Chr ;
+mkdir -p $INDELs_per_Chr ;
+
+srun --hint=nomultithread --ntasks=12 ./Phase4.exe
