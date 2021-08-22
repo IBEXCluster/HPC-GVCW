@@ -28,7 +28,7 @@ Ibex is a heterogeneous group of nodes, a mix of AMD, Intel and Nvidia GPUs with
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/Graphical_abstract.png)
 
 <b> Phase #1 - Data pre-processing</b> <br>
-&ensp; The objective of this phase is to get the clean data from the collected rice genome samples. This includes, (a) Genome alignment using BWA MEM algorithm, (b) Mark Duplicate and Read grouping using GATK. <br> <br> 
+&ensp; The objective of this phase is to get the clean data from the collected rice genome samples. This includes, (a) Genome alignment using BWA MEM algorithm, (b) Update FixMate reads for the same set of genomes, Mark Duplicate and Read grouping using Genome Analysis ToolKit (GATK). <br> <br> 
 <b>Phase #2 - Variant discovery </b> <br>
 <b>Phase #3 - Callset refinement </b> <br>
 <b>Phase #4 - Variant tables </b> <br>
