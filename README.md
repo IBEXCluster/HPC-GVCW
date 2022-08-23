@@ -48,3 +48,8 @@ Ibex is a heterogeneous group of nodes, a mix of AMD, Intel and Nvidia GPUs with
 &ensp; In this phase, the quality of genotype is enriched through variant filters and it’s also separated based on SNPs and INDELs from these independent chunks of GenotypeGVCFs files. Once all the chunks of filtered SNPs and INDELs are generated, all these partial chunks can be combined into a single file using GatherVcfs and its recommended to assemble per chromosome. The chromosome-based SNPs and INDELs are converted into variant table.
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/Phase4.png)
 <br>
+
+## Summary of workflow steps across multiple phases 
+&ensp; The below table summarizes various bioinformatics tools used in different stages of the workflow. Additionally, we provided the optimal number of CPUs used, data parallelization methods and input/output file formats are summarized.
+
+	![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/Table.png)
