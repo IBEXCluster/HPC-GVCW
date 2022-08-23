@@ -52,4 +52,4 @@ Ibex is a heterogeneous group of nodes, a mix of AMD, Intel and Nvidia GPUs with
 ## Summary of workflow steps across multiple phases 
 &ensp; The below table summarizes various bioinformatics tools used in different stages of the workflow. Additionally, we provided the optimal number of CPUs used, data parallelization methods and input/output file formats are summarized.
 
-	![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/Table.png)
+![](https://www.hpc.kaust.edu.sa//sites/default/files/files/public/Table.png)
