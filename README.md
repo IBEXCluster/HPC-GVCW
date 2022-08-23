@@ -30,5 +30,6 @@ Ibex is a heterogeneous group of nodes, a mix of AMD, Intel and Nvidia GPUs with
 <b> Phase #1 - Data pre-processing</b> <br>
 &ensp; The objective of this phase is to get the clean data from the collected rice genome samples. This includes, (a) Genome alignment using BWA MEM algorithm, (b) Update FixMate reads for the same set of genomes, Mark Duplicate and Read grouping using Genome Analysis ToolKit (GATK). <br> <br> 
 <b>Phase #2 - Variant discovery </b> <br>
+The objective of this phase is to call the variants per sample and generate gVCFs files. Two major steps are required in this variant discovery phase. First, the multiple sorted input files are merged into single BAM file and (re)sorted to the merged BAM using SAMTools. Second step is to call the SNPs and INDELs simultaneously via local denovo-assembly of haplotypes in an active region using GATK called “HaplotypeCaller”. At this end of this phase, we will generate a gVCF output of SNPs and INDELs. <br> <br>
 <b>Phase #3 - Callset refinement </b> <br>
 <b>Phase #4 - Variant tables </b> <br>
