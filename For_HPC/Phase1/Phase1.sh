@@ -3,7 +3,7 @@
 export REF=/project/k01/kathirn/3k/ref/Nipponbare_chr.fasta ;
 export INPUT=/project/k1514/batch3/cleandata
 export PROJECT=/project/k01/kathirn/3k/OUTPUT/batch2 ;
-export CORE=1 ;
+export CORE=8 ;
 val=$1;
 if [ $val -eq 0 ]
 then 
