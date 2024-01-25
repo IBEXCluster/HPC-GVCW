@@ -1,4 +1,4 @@
-# Rice-Variant-Calling
+# HPC-GVCW
 
 ## Principal investigators (PI)
 
