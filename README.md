@@ -21,6 +21,11 @@ Manjula Thimma {manjula.thimma@kaust.edu.sa} <br>
 Keerthana Manickam {keerthana9811@gmail.com} <br> 
 Rod A Wing {rwing@ag.arizona.edu, rod.wing@kaust.edu.sa} 
 
+## Publication: 
+ https://doi.org/10.1186/s12915-024-01820-5 
+ PDF available here:  https://link.springer.com/content/pdf/10.1186/s12915-024-01820-5.pdf.
+
+
 ## Computational systems 
 
 ### About Shaheen 
