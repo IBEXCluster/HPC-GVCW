@@ -36,6 +36,12 @@ Ibex is a heterogeneous group of nodes, a mix of AMD, Intel and Nvidia GPUs with
 
 ## Workflow for Rice Variant Calling 
 
+### Required Software
+The following software are used and tested for HPC-GVCW. </br>
+  1. bwa 0.7.17 </br>
+  2. samtools 1.8 </br>
+  3. gatk 4.1.6.0 and </br>
+  4. tabix 0.2.6 </br> 
 
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/Graphical_abstract.png)
 
